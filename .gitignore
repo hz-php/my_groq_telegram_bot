@@ -16,3 +16,13 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+_DEBUG_
+_ERROR_.log
+_DEBUG_.*
+_DEBUG_UPDATE_
+_DEBUG_22
+_DEBUG_2222
+_DEBUG_!
+_DEBUG_BOOK_DATA
+*.debug

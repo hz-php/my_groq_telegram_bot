@@ -2,6 +2,9 @@
 
 namespace App\Services;
 
+use App\Actions\Telegram\HandleCallbackQueryAction;
+use App\Actions\Telegram\HandleClearCommandAction;
+use App\Actions\Telegram\HandleStartCommandAction;
 use App\Models\TelegramUser;
 use App\Models\TelegramMessage;
 use App\Services\AiChatService;
@@ -14,6 +17,7 @@ class TelegramService
     protected TelegramApi $telegram;
     protected AiChatService $aiChat;
     protected int $historyLimit = 10; // сколько последних сообщений хранить для контекста
+
 
     public function __construct(TelegramApi $telegram, AiChatService $aiChat)
     {
@@ -28,9 +32,10 @@ class TelegramService
     {
         $chat = $update['message']['chat'] ?? null;
         $text = trim($update['message']['text'] ?? '');
-
-        if (!$chat || !$text) return;
-
+       
+        if (!$chat || !$text)
+            return;
+ 
         // 1️⃣ Сохраняем пользователя
         $user = TelegramUser::updateOrCreate(
             ['chat_id' => $chat['id']],
@@ -42,17 +47,14 @@ class TelegramService
                 'last_active_at' => Carbon::now(),
             ]
         );
-
-        // 2️⃣ Обработка команд
+   
         if ($text === '/start') {
-            $this->sendMessage($chat['id'], "Привет! Доступные команды:\n/start — список команд\n/clear — очистка контекста");
+            app(HandleStartCommandAction::class)->execute($chat['id']);
             return;
         }
 
         if ($text === '/clear') {
-            // очищаем контекст
-            TelegramMessage::where('user_id', $user->id)->update(['use_for_context' => false]);
-            $this->sendMessage($chat['id'], "Контекст переписки очищен. Начинаем новый чат.");
+            app(HandleClearCommandAction::class)->execute($chat['id'], $user->id);
             return;
         }
 

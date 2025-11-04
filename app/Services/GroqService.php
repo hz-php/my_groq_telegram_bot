@@ -34,7 +34,7 @@ class GroqService
         }
 
         $body = [
-            'model' => 'compound-beta-mini', // можно настроить в config
+            'model' => 'llama-3.3-70b-versatile', // актуальная production модель
             'messages' => $messages,
             'temperature' => 0.3,
             'max_tokens' => 512,
@@ -47,7 +47,7 @@ class GroqService
             ])->post($this->apiUrl, $body);
 
             if (!$response->successful()) {
-                Log::error('Groq API also failed', [
+                Log::error('Groq API failed', [
                     'status' => $response->status(),
                     'body' => $response->body()
                 ]);
