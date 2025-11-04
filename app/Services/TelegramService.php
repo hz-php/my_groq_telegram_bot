@@ -33,7 +33,7 @@ class TelegramService
      * Обрабатывает входящее сообщение
      */
     public function handleIncomingMessage(array $update): void
-    { file_put_contents(__DIR__ . '/_DEBUG_', print_r($update, true));
+    { 
         $chat = $update['message']['chat'] ?? null;
         $text = trim($update['message']['text'] ?? '');
         if (!$chat || !$text)

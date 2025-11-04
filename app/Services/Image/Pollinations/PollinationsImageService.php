@@ -19,7 +19,7 @@ class PollinationsImageService
         $url = 'https://image.pollinations.ai/prompt/'
             . urlencode($prompt)
             . '?model=' . $this->model . '&token=' . $this->apiToken;
-            file_put_contents(__DIR__ . '/_DEBUG_', print_r($url, true));
+           
         return $url; // Ссылка на сгенерированное изображение
     }
 
