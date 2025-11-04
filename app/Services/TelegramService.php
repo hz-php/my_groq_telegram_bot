@@ -33,7 +33,7 @@ class TelegramService
      * Обрабатывает входящее сообщение
      */
     public function handleIncomingMessage(array $update): void
-    {
+    { file_put_contents(__DIR__ . '/_DEBUG_', print_r($update, true));
         $chat = $update['message']['chat'] ?? null;
         $text = trim($update['message']['text'] ?? '');
         if (!$chat || !$text)
@@ -83,6 +83,12 @@ class TelegramService
                 $this->sendPersistentMenu($chatId);
                 $this->sendMessage($chatId, "Введите описание изображения:");
                 return true;
+            case 'Генерировать аудио':
+                $user->mode = 'audio_generation';
+                $user->save();
+                $this->sendPersistentMenu($chatId);
+                $this->sendMessage($chatId, "Введите что вы хотите послушать:");
+                return true;
         }
 
         return false;
@@ -102,7 +108,7 @@ class TelegramService
                 $this->sendMessage($chatId, "Введите текст для генерации аудио:");
                 return true;
             case 'Помощь':
-                $this->sendMessage($chatId, "Справка по боту:\n- Генерировать изображение\n- Очистить историю");
+                $this->sendMessage($chatId, "Справка по боту:\n- Генерировать изображение /generate_image \n- Очистить историю /clear\n- Генерировать аудио");
                 return true;
 
             case 'Очистить историю':

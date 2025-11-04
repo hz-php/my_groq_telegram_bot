@@ -7,7 +7,7 @@ class PollinationsImageService
     protected string $model;
     protected string $apiToken;
 
-    public function __construct(string $model = 'kontext')
+    public function __construct(string $model = 'gptimage')
     {
         $this->model = $model;
         $this->apiToken = env('POLLINATIONS_API_TOKEN', '');

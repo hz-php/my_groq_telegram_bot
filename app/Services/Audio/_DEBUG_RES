@@ -8,7 +8,7 @@ Illuminate\Http\Client\Response Object
                 (
                     [Date] => Array
                         (
-                            [0] => Tue, 04 Nov 2025 10:05:13 GMT
+                            [0] => Tue, 04 Nov 2025 10:56:19 GMT
                         )
 
                     [Content-Type] => Array
@@ -18,7 +18,7 @@ Illuminate\Http\Client\Response Object
 
                     [Content-Length] => Array
                         (
-                            [0] => 162141
+                            [0] => 91533
                         )
 
                     [Connection] => Array
@@ -33,7 +33,7 @@ Illuminate\Http\Client\Response Object
 
                     [CF-Ray] => Array
                         (
-                            [0] => 99934a979e3321df-WAW
+                            [0] => 999395770b95afc3-WAW
                         )
 
                     [CF-Cache-Status] => Array
@@ -53,7 +53,7 @@ Illuminate\Http\Client\Response Object
 
                     [ETag] => Array
                         (
-                            [0] => W/"2795d-ex9qpaun1oZAMpIgJcZ9UDHuGcw"
+                            [0] => W/"1658d-6lDNNTo7ZsG8CnoljZHmoa+foak"
                         )
 
                     [Strict-Transport-Security] => Array
@@ -78,22 +78,22 @@ Illuminate\Http\Client\Response Object
 
                     [x-usage-completion-audio-tokens] => Array
                         (
-                            [0] => 348
+                            [0] => 192
                         )
 
                     [x-usage-completion-text-tokens] => Array
                         (
-                            [0] => 79
+                            [0] => 54
                         )
 
                     [x-usage-prompt-text-tokens] => Array
                         (
-                            [0] => 15
+                            [0] => 13
                         )
 
                     [x-usage-total-tokens] => Array
                         (
-                            [0] => 442
+                            [0] => 259
                         )
 
                     [speculation-rules] => Array
@@ -129,7 +129,7 @@ Illuminate\Http\Client\Response Object
             [protocol:GuzzleHttp\Psr7\Response:private] => 1.1
             [stream:GuzzleHttp\Psr7\Response:private] => GuzzleHttp\Psr7\Stream Object
                 (
-                    [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #581
+                    [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #582
                     [size:GuzzleHttp\Psr7\Stream:private] => 
                     [seekable:GuzzleHttp\Psr7\Stream:private] => 1
                     [readable:GuzzleHttp\Psr7\Stream:private] => 1
@@ -165,10 +165,10 @@ Illuminate\Http\Client\Response Object
                             [userInfo:GuzzleHttp\Psr7\Uri:private] => 
                             [host:GuzzleHttp\Psr7\Uri:private] => text.pollinations.ai
                             [port:GuzzleHttp\Psr7\Uri:private] => 
-                            [path:GuzzleHttp\Psr7\Uri:private] => /%D0%A7%D1%82%D0%BE+%D0%BC%D0%BD%D0%B5+%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%3F
+                            [path:GuzzleHttp\Psr7\Uri:private] => /%D0%9F%D0%B5%D1%81%D0%BD%D1%8E+%D1%81%D0%BF%D0%BE%D0%B9
                             [query:GuzzleHttp\Psr7\Uri:private] => model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
                             [fragment:GuzzleHttp\Psr7\Uri:private] => 
-                            [composedComponents:GuzzleHttp\Psr7\Uri:private] => https://text.pollinations.ai/%D0%A7%D1%82%D0%BE+%D0%BC%D0%BD%D0%B5+%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%3F?model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
+                            [composedComponents:GuzzleHttp\Psr7\Uri:private] => https://text.pollinations.ai/%D0%9F%D0%B5%D1%81%D0%BD%D1%8E+%D1%81%D0%BF%D0%BE%D0%B9?model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
                         )
 
                     [headers:GuzzleHttp\Psr7\Request:private] => Array
@@ -194,7 +194,7 @@ Illuminate\Http\Client\Response Object
                     [protocol:GuzzleHttp\Psr7\Request:private] => 1.1
                     [stream:GuzzleHttp\Psr7\Request:private] => GuzzleHttp\Psr7\Stream Object
                         (
-                            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #571
+                            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #572
                             [size:GuzzleHttp\Psr7\Stream:private] => 0
                             [seekable:GuzzleHttp\Psr7\Stream:private] => 1
                             [readable:GuzzleHttp\Psr7\Stream:private] => 1
@@ -216,7 +216,7 @@ Illuminate\Http\Client\Response Object
                         (
                             [Date] => Array
                                 (
-                                    [0] => Tue, 04 Nov 2025 10:05:13 GMT
+                                    [0] => Tue, 04 Nov 2025 10:56:19 GMT
                                 )
 
                             [Content-Type] => Array
@@ -226,7 +226,7 @@ Illuminate\Http\Client\Response Object
 
                             [Content-Length] => Array
                                 (
-                                    [0] => 162141
+                                    [0] => 91533
                                 )
 
                             [Connection] => Array
@@ -241,7 +241,7 @@ Illuminate\Http\Client\Response Object
 
                             [CF-Ray] => Array
                                 (
-                                    [0] => 99934a979e3321df-WAW
+                                    [0] => 999395770b95afc3-WAW
                                 )
 
                             [CF-Cache-Status] => Array
@@ -261,7 +261,7 @@ Illuminate\Http\Client\Response Object
 
                             [ETag] => Array
                                 (
-                                    [0] => W/"2795d-ex9qpaun1oZAMpIgJcZ9UDHuGcw"
+                                    [0] => W/"1658d-6lDNNTo7ZsG8CnoljZHmoa+foak"
                                 )
 
                             [Strict-Transport-Security] => Array
@@ -286,22 +286,22 @@ Illuminate\Http\Client\Response Object
 
                             [x-usage-completion-audio-tokens] => Array
                                 (
-                                    [0] => 348
+                                    [0] => 192
                                 )
 
                             [x-usage-completion-text-tokens] => Array
                                 (
-                                    [0] => 79
+                                    [0] => 54
                                 )
 
                             [x-usage-prompt-text-tokens] => Array
                                 (
-                                    [0] => 15
+                                    [0] => 13
                                 )
 
                             [x-usage-total-tokens] => Array
                                 (
-                                    [0] => 442
+                                    [0] => 259
                                 )
 
                             [speculation-rules] => Array
@@ -337,7 +337,7 @@ Illuminate\Http\Client\Response Object
                     [protocol:GuzzleHttp\Psr7\Response:private] => 1.1
                     [stream:GuzzleHttp\Psr7\Response:private] => GuzzleHttp\Psr7\Stream Object
                         (
-                            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #581
+                            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #582
                             [size:GuzzleHttp\Psr7\Stream:private] => 
                             [seekable:GuzzleHttp\Psr7\Stream:private] => 1
                             [readable:GuzzleHttp\Psr7\Stream:private] => 1
@@ -351,51 +351,51 @@ Illuminate\Http\Client\Response Object
 
                 )
 
-            [transferTime:GuzzleHttp\TransferStats:private] => 4.45543
+            [transferTime:GuzzleHttp\TransferStats:private] => 3.142406
             [handlerStats:GuzzleHttp\TransferStats:private] => Array
                 (
-                    [url] => https://text.pollinations.ai/%D0%A7%D1%82%D0%BE+%D0%BC%D0%BD%D0%B5+%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%3F?model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
+                    [url] => https://text.pollinations.ai/%D0%9F%D0%B5%D1%81%D0%BD%D1%8E+%D1%81%D0%BF%D0%BE%D0%B9?model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
                     [content_type] => audio/mpeg
                     [http_code] => 200
-                    [header_size] => 685
-                    [request_size] => 203
+                    [header_size] => 684
+                    [request_size] => 181
                     [filetime] => -1
                     [ssl_verify_result] => 0
                     [redirect_count] => 0
-                    [total_time] => 4.45543
-                    [namelookup_time] => 0.098139
-                    [connect_time] => 0.134405
-                    [pretransfer_time] => 0.356464
+                    [total_time] => 3.142406
+                    [namelookup_time] => 0.001556
+                    [connect_time] => 0.022614
+                    [pretransfer_time] => 0.276885
                     [size_upload] => 0
-                    [size_download] => 162141
-                    [speed_download] => 36391
+                    [size_download] => 91533
+                    [speed_download] => 29128
                     [speed_upload] => 0
-                    [download_content_length] => 162141
+                    [download_content_length] => 91533
                     [upload_content_length] => 0
-                    [starttransfer_time] => 4.399314
+                    [starttransfer_time] => 3.097988
                     [redirect_time] => 0
                     [redirect_url] => 
-                    [primary_ip] => 104.18.12.105
+                    [primary_ip] => 104.18.13.105
                     [certinfo] => Array
                         (
                         )
 
                     [primary_port] => 443
                     [local_ip] => 192.168.1.4
-                    [local_port] => 56642
+                    [local_port] => 57765
                     [http_version] => 2
                     [protocol] => 2
                     [ssl_verifyresult] => 0
                     [scheme] => https
-                    [appconnect_time_us] => 356421
-                    [connect_time_us] => 134405
-                    [namelookup_time_us] => 98139
-                    [pretransfer_time_us] => 356464
+                    [appconnect_time_us] => 276846
+                    [connect_time_us] => 22614
+                    [namelookup_time_us] => 1556
+                    [pretransfer_time_us] => 276885
                     [redirect_time_us] => 0
-                    [starttransfer_time_us] => 4399314
-                    [total_time_us] => 4455430
+                    [starttransfer_time_us] => 3097988
+                    [total_time_us] => 3142406
                     [effective_method] => GET
-                    [appconnect_time] => 0.356421
+                    [appconnect_time] => 0.276846
                 )
 
             [handlerErrorData:GuzzleHttp\TransferStats:private] => 0
