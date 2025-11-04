@@ -30,7 +30,7 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-        'telegram' => [
+    'telegram' => [
         'token' => env('TELEGRAM_BOT_TOKEN'),
     ],
 
@@ -40,9 +40,15 @@ return [
         'base_url' => env('OPENROUTER_BASE_URL', 'https://openrouter.ai/api/v1'), // Значение по умолчанию
     ],
 
-       'groq' => [
+    'groq' => [
         'api_key' => env('GROQ_API_KEY'),
         'base_url' => 'https://api.groq.com/openai/v1',
         'model' => 'llama-3.3-70b-versatile', // бесплатная модель у Groq
+    ],
+    'huggingface' => [
+        'api_key' => env('HUGGINGFACE_API_KEY'),
+    ],
+    'replicate' => [
+        'api_key' => env('REPLICATE_API_KEY'),
     ],
 ];

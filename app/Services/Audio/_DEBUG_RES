@@ -1,0 +1,404 @@
+Illuminate\Http\Client\Response Object
+(
+    [response:protected] => GuzzleHttp\Psr7\Response Object
+        (
+            [reasonPhrase:GuzzleHttp\Psr7\Response:private] => OK
+            [statusCode:GuzzleHttp\Psr7\Response:private] => 200
+            [headers:GuzzleHttp\Psr7\Response:private] => Array
+                (
+                    [Date] => Array
+                        (
+                            [0] => Tue, 04 Nov 2025 10:05:13 GMT
+                        )
+
+                    [Content-Type] => Array
+                        (
+                            [0] => audio/mpeg
+                        )
+
+                    [Content-Length] => Array
+                        (
+                            [0] => 162141
+                        )
+
+                    [Connection] => Array
+                        (
+                            [0] => keep-alive
+                        )
+
+                    [Server] => Array
+                        (
+                            [0] => cloudflare
+                        )
+
+                    [CF-Ray] => Array
+                        (
+                            [0] => 99934a979e3321df-WAW
+                        )
+
+                    [CF-Cache-Status] => Array
+                        (
+                            [0] => DYNAMIC
+                        )
+
+                    [Access-Control-Allow-Origin] => Array
+                        (
+                            [0] => *
+                        )
+
+                    [Cache-Control] => Array
+                        (
+                            [0] => public, max-age=31536000, immutable
+                        )
+
+                    [ETag] => Array
+                        (
+                            [0] => W/"2795d-ex9qpaun1oZAMpIgJcZ9UDHuGcw"
+                        )
+
+                    [Strict-Transport-Security] => Array
+                        (
+                            [0] => max-age=0; includeSubDomains; preload
+                        )
+
+                    [X-Content-Type-Options] => Array
+                        (
+                            [0] => nosniff
+                        )
+
+                    [x-model-used] => Array
+                        (
+                            [0] => gpt-4o-mini-audio-preview-2024-12-17
+                        )
+
+                    [x-powered-by] => Array
+                        (
+                            [0] => Express
+                        )
+
+                    [x-usage-completion-audio-tokens] => Array
+                        (
+                            [0] => 348
+                        )
+
+                    [x-usage-completion-text-tokens] => Array
+                        (
+                            [0] => 79
+                        )
+
+                    [x-usage-prompt-text-tokens] => Array
+                        (
+                            [0] => 15
+                        )
+
+                    [x-usage-total-tokens] => Array
+                        (
+                            [0] => 442
+                        )
+
+                    [speculation-rules] => Array
+                        (
+                            [0] => "/cdn-cgi/speculation"
+                        )
+
+                )
+
+            [headerNames:GuzzleHttp\Psr7\Response:private] => Array
+                (
+                    [date] => Date
+                    [content-type] => Content-Type
+                    [content-length] => Content-Length
+                    [connection] => Connection
+                    [server] => Server
+                    [cf-ray] => CF-Ray
+                    [cf-cache-status] => CF-Cache-Status
+                    [access-control-allow-origin] => Access-Control-Allow-Origin
+                    [cache-control] => Cache-Control
+                    [etag] => ETag
+                    [strict-transport-security] => Strict-Transport-Security
+                    [x-content-type-options] => X-Content-Type-Options
+                    [x-model-used] => x-model-used
+                    [x-powered-by] => x-powered-by
+                    [x-usage-completion-audio-tokens] => x-usage-completion-audio-tokens
+                    [x-usage-completion-text-tokens] => x-usage-completion-text-tokens
+                    [x-usage-prompt-text-tokens] => x-usage-prompt-text-tokens
+                    [x-usage-total-tokens] => x-usage-total-tokens
+                    [speculation-rules] => speculation-rules
+                )
+
+            [protocol:GuzzleHttp\Psr7\Response:private] => 1.1
+            [stream:GuzzleHttp\Psr7\Response:private] => GuzzleHttp\Psr7\Stream Object
+                (
+                    [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #581
+                    [size:GuzzleHttp\Psr7\Stream:private] => 
+                    [seekable:GuzzleHttp\Psr7\Stream:private] => 1
+                    [readable:GuzzleHttp\Psr7\Stream:private] => 1
+                    [writable:GuzzleHttp\Psr7\Stream:private] => 1
+                    [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
+                    [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [decoded:protected] => 
+    [cookies] => GuzzleHttp\Cookie\CookieJar Object
+        (
+            [cookies:GuzzleHttp\Cookie\CookieJar:private] => Array
+                (
+                )
+
+            [strictMode:GuzzleHttp\Cookie\CookieJar:private] => 
+        )
+
+    [transferStats] => GuzzleHttp\TransferStats Object
+        (
+            [request:GuzzleHttp\TransferStats:private] => GuzzleHttp\Psr7\Request Object
+                (
+                    [method:GuzzleHttp\Psr7\Request:private] => GET
+                    [requestTarget:GuzzleHttp\Psr7\Request:private] => 
+                    [uri:GuzzleHttp\Psr7\Request:private] => GuzzleHttp\Psr7\Uri Object
+                        (
+                            [scheme:GuzzleHttp\Psr7\Uri:private] => https
+                            [userInfo:GuzzleHttp\Psr7\Uri:private] => 
+                            [host:GuzzleHttp\Psr7\Uri:private] => text.pollinations.ai
+                            [port:GuzzleHttp\Psr7\Uri:private] => 
+                            [path:GuzzleHttp\Psr7\Uri:private] => /%D0%A7%D1%82%D0%BE+%D0%BC%D0%BD%D0%B5+%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%3F
+                            [query:GuzzleHttp\Psr7\Uri:private] => model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
+                            [fragment:GuzzleHttp\Psr7\Uri:private] => 
+                            [composedComponents:GuzzleHttp\Psr7\Uri:private] => https://text.pollinations.ai/%D0%A7%D1%82%D0%BE+%D0%BC%D0%BD%D0%B5+%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%3F?model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
+                        )
+
+                    [headers:GuzzleHttp\Psr7\Request:private] => Array
+                        (
+                            [User-Agent] => Array
+                                (
+                                    [0] => GuzzleHttp/7
+                                )
+
+                            [Host] => Array
+                                (
+                                    [0] => text.pollinations.ai
+                                )
+
+                        )
+
+                    [headerNames:GuzzleHttp\Psr7\Request:private] => Array
+                        (
+                            [user-agent] => User-Agent
+                            [host] => Host
+                        )
+
+                    [protocol:GuzzleHttp\Psr7\Request:private] => 1.1
+                    [stream:GuzzleHttp\Psr7\Request:private] => GuzzleHttp\Psr7\Stream Object
+                        (
+                            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #571
+                            [size:GuzzleHttp\Psr7\Stream:private] => 0
+                            [seekable:GuzzleHttp\Psr7\Stream:private] => 1
+                            [readable:GuzzleHttp\Psr7\Stream:private] => 1
+                            [writable:GuzzleHttp\Psr7\Stream:private] => 1
+                            [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
+                            [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [response:GuzzleHttp\TransferStats:private] => GuzzleHttp\Psr7\Response Object
+                (
+                    [reasonPhrase:GuzzleHttp\Psr7\Response:private] => OK
+                    [statusCode:GuzzleHttp\Psr7\Response:private] => 200
+                    [headers:GuzzleHttp\Psr7\Response:private] => Array
+                        (
+                            [Date] => Array
+                                (
+                                    [0] => Tue, 04 Nov 2025 10:05:13 GMT
+                                )
+
+                            [Content-Type] => Array
+                                (
+                                    [0] => audio/mpeg
+                                )
+
+                            [Content-Length] => Array
+                                (
+                                    [0] => 162141
+                                )
+
+                            [Connection] => Array
+                                (
+                                    [0] => keep-alive
+                                )
+
+                            [Server] => Array
+                                (
+                                    [0] => cloudflare
+                                )
+
+                            [CF-Ray] => Array
+                                (
+                                    [0] => 99934a979e3321df-WAW
+                                )
+
+                            [CF-Cache-Status] => Array
+                                (
+                                    [0] => DYNAMIC
+                                )
+
+                            [Access-Control-Allow-Origin] => Array
+                                (
+                                    [0] => *
+                                )
+
+                            [Cache-Control] => Array
+                                (
+                                    [0] => public, max-age=31536000, immutable
+                                )
+
+                            [ETag] => Array
+                                (
+                                    [0] => W/"2795d-ex9qpaun1oZAMpIgJcZ9UDHuGcw"
+                                )
+
+                            [Strict-Transport-Security] => Array
+                                (
+                                    [0] => max-age=0; includeSubDomains; preload
+                                )
+
+                            [X-Content-Type-Options] => Array
+                                (
+                                    [0] => nosniff
+                                )
+
+                            [x-model-used] => Array
+                                (
+                                    [0] => gpt-4o-mini-audio-preview-2024-12-17
+                                )
+
+                            [x-powered-by] => Array
+                                (
+                                    [0] => Express
+                                )
+
+                            [x-usage-completion-audio-tokens] => Array
+                                (
+                                    [0] => 348
+                                )
+
+                            [x-usage-completion-text-tokens] => Array
+                                (
+                                    [0] => 79
+                                )
+
+                            [x-usage-prompt-text-tokens] => Array
+                                (
+                                    [0] => 15
+                                )
+
+                            [x-usage-total-tokens] => Array
+                                (
+                                    [0] => 442
+                                )
+
+                            [speculation-rules] => Array
+                                (
+                                    [0] => "/cdn-cgi/speculation"
+                                )
+
+                        )
+
+                    [headerNames:GuzzleHttp\Psr7\Response:private] => Array
+                        (
+                            [date] => Date
+                            [content-type] => Content-Type
+                            [content-length] => Content-Length
+                            [connection] => Connection
+                            [server] => Server
+                            [cf-ray] => CF-Ray
+                            [cf-cache-status] => CF-Cache-Status
+                            [access-control-allow-origin] => Access-Control-Allow-Origin
+                            [cache-control] => Cache-Control
+                            [etag] => ETag
+                            [strict-transport-security] => Strict-Transport-Security
+                            [x-content-type-options] => X-Content-Type-Options
+                            [x-model-used] => x-model-used
+                            [x-powered-by] => x-powered-by
+                            [x-usage-completion-audio-tokens] => x-usage-completion-audio-tokens
+                            [x-usage-completion-text-tokens] => x-usage-completion-text-tokens
+                            [x-usage-prompt-text-tokens] => x-usage-prompt-text-tokens
+                            [x-usage-total-tokens] => x-usage-total-tokens
+                            [speculation-rules] => speculation-rules
+                        )
+
+                    [protocol:GuzzleHttp\Psr7\Response:private] => 1.1
+                    [stream:GuzzleHttp\Psr7\Response:private] => GuzzleHttp\Psr7\Stream Object
+                        (
+                            [stream:GuzzleHttp\Psr7\Stream:private] => Resource id #581
+                            [size:GuzzleHttp\Psr7\Stream:private] => 
+                            [seekable:GuzzleHttp\Psr7\Stream:private] => 1
+                            [readable:GuzzleHttp\Psr7\Stream:private] => 1
+                            [writable:GuzzleHttp\Psr7\Stream:private] => 1
+                            [uri:GuzzleHttp\Psr7\Stream:private] => php://temp
+                            [customMetadata:GuzzleHttp\Psr7\Stream:private] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [transferTime:GuzzleHttp\TransferStats:private] => 4.45543
+            [handlerStats:GuzzleHttp\TransferStats:private] => Array
+                (
+                    [url] => https://text.pollinations.ai/%D0%A7%D1%82%D0%BE+%D0%BC%D0%BD%D0%B5+%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%3F?model=openai-audio&voice=fable&token=zk7TAvTeNnBpX14v
+                    [content_type] => audio/mpeg
+                    [http_code] => 200
+                    [header_size] => 685
+                    [request_size] => 203
+                    [filetime] => -1
+                    [ssl_verify_result] => 0
+                    [redirect_count] => 0
+                    [total_time] => 4.45543
+                    [namelookup_time] => 0.098139
+                    [connect_time] => 0.134405
+                    [pretransfer_time] => 0.356464
+                    [size_upload] => 0
+                    [size_download] => 162141
+                    [speed_download] => 36391
+                    [speed_upload] => 0
+                    [download_content_length] => 162141
+                    [upload_content_length] => 0
+                    [starttransfer_time] => 4.399314
+                    [redirect_time] => 0
+                    [redirect_url] => 
+                    [primary_ip] => 104.18.12.105
+                    [certinfo] => Array
+                        (
+                        )
+
+                    [primary_port] => 443
+                    [local_ip] => 192.168.1.4
+                    [local_port] => 56642
+                    [http_version] => 2
+                    [protocol] => 2
+                    [ssl_verifyresult] => 0
+                    [scheme] => https
+                    [appconnect_time_us] => 356421
+                    [connect_time_us] => 134405
+                    [namelookup_time_us] => 98139
+                    [pretransfer_time_us] => 356464
+                    [redirect_time_us] => 0
+                    [starttransfer_time_us] => 4399314
+                    [total_time_us] => 4455430
+                    [effective_method] => GET
+                    [appconnect_time] => 0.356421
+                )
+
+            [handlerErrorData:GuzzleHttp\TransferStats:private] => 0
+        )
+
+)

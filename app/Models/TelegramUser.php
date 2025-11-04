@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class TelegramUser extends Model
 {
     protected $fillable = [
-        'chat_id', 'username', 'first_name', 'last_name', 'language_code', 'last_active_at'
+        'chat_id', 'username', 'first_name', 'last_name', 'language_code', 'last_active_at', 'mode'
     ];
 
     public function messages(): HasMany
