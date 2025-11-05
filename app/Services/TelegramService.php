@@ -40,8 +40,10 @@ class TelegramService
 
         $user = $this->updateOrCreateUser($chat, $update);
 
-        if ($this->handleCommands($user, $chat['id'], $text)) return;
-        if ($this->handleMenuActions($user, $chat['id'], $text)) return;
+        if ($this->handleCommands($user, $chat['id'], $text))
+            return;
+        if ($this->handleMenuActions($user, $chat['id'], $text))
+            return;
 
         if ($user->mode === 'image_generation') {
             $this->handleImageGeneration($user, $chat['id'], $text);
@@ -52,7 +54,10 @@ class TelegramService
             $this->handleAudioGeneration($user, $chat['id'], $text);
             return;
         }
-
+        if ($text === '/slot') {
+            $this->sendMessage($chat['id'], "🎮 Играть можно здесь: " . url('/game/slot'));
+            return;
+        }
         $this->handleAiChat($user, $chat['id'], $text);
     }
 
@@ -109,6 +114,10 @@ class TelegramService
                     ->update(['use_for_context' => false]);
                 $this->sendPersistentMenu($chatId, "Контекст беседы очищен.");
                 return true;
+            case 'Играть в слот 🎰':
+                $this->sendMessage($chatId, "🎮 Играть можно здесь: " . url('/game/slot'));
+                return true;
+
         }
 
         return false;
@@ -235,25 +244,120 @@ class TelegramService
 
     protected function sendPersistentMenu(int $chatId, string $text): void
     {
-        $keyboard = Keyboard::make([
+        $safeText = trim($text) !== '' ? $text : ' '; // Неразрывный пробел, чтобы не пустая строка
+
+        // Обычные кнопки меню
+        $keyboard = [
             'keyboard' => [
                 ['Генерировать изображение', 'Генерировать аудио'],
                 ['Очистить историю', 'Помощь']
             ],
             'resize_keyboard' => true,
             'one_time_keyboard' => false,
-        ]);
+        ];
 
-        $safeText = trim($text) !== '' ? $text : ' '; // Неразрывный пробел, чтобы не пустая строка
+        // Inline кнопка WebApp
+        $inlineKeyboard = [
+            'inline_keyboard' => [
+                [
+                    [
+                        'text' => 'Играть 🎰',
+                        'web_app' => ['url' => 'https://cf134ad85c9a48.lhr.life/game/slot?chat_id=' . $chatId ]
+                    ]
+                ]
+            ]
+        ];
 
         try {
+            // Отправляем обычные кнопки
             $this->telegram->sendMessage([
                 'chat_id' => $chatId,
                 'text' => $safeText,
-                'reply_markup' => $keyboard,
+                'reply_markup' => json_encode($keyboard)
             ]);
+
+            // Отправляем WebApp кнопку
+            $this->telegram->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'Или откройте игровой слот через кнопку:',
+                'reply_markup' => json_encode($inlineKeyboard)
+            ]);
+
         } catch (\Throwable $e) {
             Log::error("Failed to send persistent menu: " . $e->getMessage());
         }
     }
+
+
+    // protected function sendPersistentMenu(int $chatId, string $text): void
+    // {
+    //     // 1. Создаем обычную клавиатуру (без web_app)
+    //     $normalKeyboard = [
+    //         'keyboard' => [
+    //             ['Генерировать изображение', 'Генерировать аудио'],
+    //             ['Очистить историю', 'Помощь'],
+    //         ],
+    //         'resize_keyboard' => true,
+    //         'one_time_keyboard' => false,
+    //     ];
+
+    //     $safeText = trim($text) !== '' ? $text : ' '; // Неразрывный пробел, чтобы не пустая строка
+
+    //     try {
+    //         // 2. Отправляем сообщение с обычной клавиатурой
+    //         $this->telegram->sendMessage([
+    //             'chat_id' => $chatId,
+    //             'text' => $safeText,
+    //             'reply_markup' => json_encode($normalKeyboard) // или используйте Keyboard::make, но без web_app
+    //         ]);
+
+    //         // 3. Отправляем ОТДЕЛЬНОЕ сообщение с inline-клавиатурой, содержащей Web App
+    //         $inlineKeyboard = [
+    //             'inline_keyboard' => [
+    //                 [
+    //                     [
+    //                         'text' => 'Играть 🎰', // Текст кнопки
+    //                         'web_app' => ['url' => rtrim(url('https://163df165375899.lhr.life/game/slot'), ' \t\n\r\0\x0B')] // Убедитесь, что URL корректный
+    //                     ]
+    //                 ]
+    //             ]
+    //         ];
+
+    //         $this->telegram->sendMessage([
+    //             'chat_id' => $chatId,
+    //             'text' => 'Или откройте игровой слот через кнопку:',
+    //             'reply_markup' => json_encode($inlineKeyboard)
+    //         ]);
+
+    //     } catch (\Throwable $e) {
+    //         Log::error("Failed to send persistent menu: " . $e->getMessage());
+    //     }
+    // }
+    // protected function sendPersistentMenu(int $chatId, string $text): void
+    // {
+    //     $keyboard = Keyboard::make([
+    //         'keyboard' => [
+    //             ['Генерировать изображение', 'Генерировать аудио'],
+    //             ['Очистить историю', 'Помощь'],
+    //             ['Играть 🎰']
+    //         ],
+    //         [
+    //             ['text' => 'Играть  🎰', 'web_app' => ['url' => url('https://weak-cycles-cheat.loca.lt/game/slot')]]
+    //         ],
+    //         'resize_keyboard' => true,
+    //         'one_time_keyboard' => false,
+    //     ]);
+
+    //     $safeText = trim($text) !== '' ? $text : ' '; // Неразрывный пробел, чтобы не пустая строка
+
+    //     try {
+    //         $this->telegram->sendMessage([
+    //             'chat_id' => $chatId,
+    //             'text' => $safeText,
+    //             'reply_markup' => $keyboard,
+    //         ]);
+    //     } catch (\Throwable $e) {
+    //         Log::error("Failed to send persistent menu: " . $e->getMessage());
+    //     }
+    // }
 }

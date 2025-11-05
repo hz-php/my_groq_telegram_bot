@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\TelegramWebhookController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::post('/bot-webhook', [TelegramWebhookController::class, 'handleWebhook'])->name('telegram.webhook');
+
+Route::get('/game/slot', [GameController::class, 'slot'])->name('game.slot');
+Route::post('/game/slot/result', [GameController::class, 'saveResult'])->name('game.slot.result');
