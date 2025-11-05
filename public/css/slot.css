@@ -1,0 +1,37 @@
+.slot-container {
+    background:#121212;
+    min-height:100vh;
+    padding:20px;
+    text-align:center;
+    color:white;
+    font-family:sans-serif;
+}
+
+.controls button {
+    cursor:pointer;
+    transition: all 0.2s ease;
+    border:none;
+    color:white;
+}
+
+.controls button:hover:not(:disabled) {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.controls button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.controls input[type=range], .controls select {
+    cursor:pointer;
+}
+
+#slots span {
+    display:inline-block;
+    transition: transform 0.2s;
+}
+
+#slots span.animate {
+    transform: rotateY(360deg);
+}

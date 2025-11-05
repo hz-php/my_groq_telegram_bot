@@ -262,7 +262,7 @@ class TelegramService
                 [
                     [
                         'text' => 'Играть 🎰',
-                        'web_app' => ['url' => 'https://cf134ad85c9a48.lhr.life/game/slot?chat_id=' . $chatId ]
+                        'web_app' => ['url' => 'https://f1cdf41528c6e8.lhr.life/game/slot?chat_id=' . $chatId ]
                     ]
                 ]
             ]
@@ -279,7 +279,7 @@ class TelegramService
             // Отправляем WebApp кнопку
             $this->telegram->sendMessage([
                 'chat_id' => $chatId,
-                'text' => 'Или откройте игровой слот через кнопку:',
+                'text' => ' Сыграем?',
                 'reply_markup' => json_encode($inlineKeyboard)
             ]);
 
